@@ -5,8 +5,8 @@ import time
 pyautogui.FAILSAFE = False
 
 # Initialize sleep variables
-sleep_time = 2
-open_time = 2
+sleep_time = 1
+open_time = 1
 
 
 def main():
