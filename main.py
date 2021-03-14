@@ -30,7 +30,8 @@ def main():
                 target_center = pyautogui.center(target)
                 pyautogui.click(target_center)
 
-                #Wait for tab to open for open_time, then close with keyboard shortcut
+                #Wait for tab to open for open_time, then close with keyboard shortcut, return mouse to original position
+                pyautogui.moveTo(prev_x, prev_y)
                 time.sleep(open_time)
                 pyautogui.hotkey('ctrl', 'w')
                 ads_clicked += 1
