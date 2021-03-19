@@ -6,7 +6,7 @@ pyautogui.FAILSAFE = False
 
 # Initialize sleep variables
 sleep_time = 1
-open_time = 1
+open_time = 0.5
 
 
 def main():
@@ -19,23 +19,26 @@ def main():
             time.sleep(sleep_time)
             target = pyautogui.locateOnScreen('BraveAdClickerFiles\Brave Browser Ad Logo.png')
 
-
+            try:
             #If match exists, proceed, else loop again
-            if target is not None:
+                if target is not None:
 
-                #Save current mouse coordinates before moving
-                prev_x, prev_y = pyautogui.position()
+                    #Save current mouse coordinates before moving
+                    prev_x, prev_y = pyautogui.position()
 
-                #Take center of target, move to location and click
-                target_center = pyautogui.center(target)
-                pyautogui.click(target_center)
+                    #Take center of target, move to location and click
+                    target_center = pyautogui.center(target)
+                    pyautogui.click(target_center)
 
-                #Wait for tab to open for open_time, then close with keyboard shortcut, return mouse to original position
-                pyautogui.moveTo(prev_x, prev_y)
-                time.sleep(open_time)
-                pyautogui.hotkey('ctrl', 'w')
-                ads_clicked += 1
-                print('Ads Clicked: ' + str(ads_clicked))
+                    #Wait for tab to open for open_time, then close with keyboard shortcut, return mouse to original position
+                    pyautogui.moveTo(prev_x, prev_y)
+                    time.sleep(open_time)
+                    pyautogui.hotkey('ctrl', 'w')
+                    ads_clicked += 1
+                    print('Ads Clicked: ' + str(ads_clicked))
+            except Exception as e:
+                print(e)
+
 
 
     except KeyboardInterrupt:
