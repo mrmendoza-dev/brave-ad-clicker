@@ -5,7 +5,7 @@ import time
 pyautogui.FAILSAFE = False
 
 # Initialize sleep variables
-sleep_time = 1
+sleep_time = 0.5
 open_time = 0.5
 
 
@@ -32,6 +32,8 @@ def main():
 
                     #Wait for tab to open for open_time, then close with keyboard shortcut, return mouse to original position
                     pyautogui.moveTo(prev_x, prev_y)
+
+                    #Close tab and update counter
                     time.sleep(open_time)
                     pyautogui.hotkey('ctrl', 'w')
                     ads_clicked += 1
