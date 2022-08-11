@@ -1,3 +1,6 @@
+TOKYO TODO: cambiar notif compatible para win-11
+
+
 # brave-ad-clicker
 
 - Brave (https://brave.com/) is a web browser that rewards users with cryptocurrency BAT tokens for viewing ads
