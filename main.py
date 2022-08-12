@@ -20,7 +20,7 @@ def main():
 
 			# SI existe el match, procede, sino vuelve al loop
 			try:
-				target = pyautogui.locateOnScreen('images/win11.png')
+				target = pyautogui.locateOnScreen('images/logo.png')
 				if target is not None:
 					# Guarda las coordenadas del mouse antes de mover
 					prev_x, prev_y = pyautogui.position()
