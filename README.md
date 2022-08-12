@@ -9,3 +9,6 @@
 ### Improvements (TODO)
 - Reduce screenshot size to target bottom-right corner where popup is
 - Add detection for MacOS, Linux
+- Simple UI for controlling app (Tkinter?)
+  - Turn On/Off
+  - Change time intervals
