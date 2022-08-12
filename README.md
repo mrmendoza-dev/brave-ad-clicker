@@ -1,4 +1,4 @@
-TOKYO TODO: cambiar notif compatible para win-11
+my fork? just made the image detection better and translated some explanations
 
 
 # brave-ad-clicker
