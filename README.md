@@ -1,4 +1,4 @@
-# brave-ad-clicker
+# Brave Ad Clicker
 
 - Currently only compatible with Windows 10
 - [Brave](https://brave.com/) is a web browser that rewards users with cryptocurrency BAT tokens for viewing ads
