@@ -5,7 +5,7 @@ import time
 pyautogui.FAILSAFE = False
 
 # Initialize sleep variables
-sleep_time = 2
+sleep_time = 1
 open_time = 0.5
 
 
@@ -15,25 +15,24 @@ def main():
 	print('Press Ctrl-C to quit.')
 	try:
 		while True:
-			# Wait for seconds in sleep_time, then check screen for a match
+			# Espera para los segundos en sleep_time, despues busca en la pantalla lo que matchee la imagen
 			time.sleep(sleep_time)
 
-			# TODO Screenshot part of screen
-			# If match exists, proceed, else loop again
+			# SI existe el match, procede, sino vuelve al loop
 			try:
-				target = pyautogui.locateOnScreen('images/logo.png')
+				target = pyautogui.locateOnScreen('images/win11.png')
 				if target is not None:
-					# Save current mouse coordinates before moving
+					# Guarda las coordenadas del mouse antes de mover
 					prev_x, prev_y = pyautogui.position()
 
-					# Take center of target, move to location and click
+					# Agarra el center del target, se mueve a la localizacion y clickea
 					target_center = pyautogui.center(target)
 					pyautogui.click(target_center)
 
-					# Wait for tab to open for open_time, then close with keyboard shortcut, return mouse to original position
+					# Espera a que se abra la pestaña en open_time, la cierra con un atajo del teclado, vuelve el mouse a la posicion inicial
 					pyautogui.moveTo(prev_x, prev_y)
 
-					# Close tab and update counter`
+					# Cierra la tab y actualiza el contador
 					time.sleep(open_time)
 					pyautogui.hotkey('ctrl', 'w')
 					ads_clicked += 1
@@ -46,9 +45,7 @@ def main():
 	except KeyboardInterrupt:
 		print('Program Terminated')
 		print(f"Total Ads Clicked: {ads_clicked}")
-
-
+		
 if __name__ == "__main__":
 	main()
 
-# https: // www.geeksforgeeks.org / taking - screenshots - using - pyscreenshot - in -python /
