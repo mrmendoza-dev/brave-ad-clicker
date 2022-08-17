@@ -4,7 +4,7 @@ from datetime import datetime
 import sys
 from os import path
 
-# Initialize failsafe (exit when pixel is (0,0)
+# Initialize failsafe (exit when pixel is (0,0))
 pyautogui.FAILSAFE = False
 
 # Initialize sleep variables
