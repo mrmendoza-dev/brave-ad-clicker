@@ -4,7 +4,7 @@ from datetime import datetime
 import sys
 from os import path
 
-# Initialize failsafe (exit when pixel is (0,0)
+# Initialize failsafe (exit when pixel is (0,0))
 pyautogui.FAILSAFE = False
 
 # Initialize sleep variables
@@ -28,6 +28,7 @@ def main():
 
 	try:
 		while True:
+			# Wait for seconds in sleep_time, then check screen for a match
 			# Espera para los segundos en sleep_time, despues busca en la pantalla lo que matchee la imagen
 			time.sleep(sleep_time)
 
@@ -36,16 +37,20 @@ def main():
 			try:
 				target = pyautogui.locateOnScreen('images/search/logo.png')
 				if target is not None:
+					# Save current mouse coordinates before moving
 					# Guarda las coordenadas del mouse antes de mover
 					prev_x, prev_y = pyautogui.position()
-
+     
+					# Take center of target, move to location and click
 					# Agarra el center del target, se mueve a la localizacion y clickea
 					target_center = pyautogui.center(target)
 					pyautogui.click(target_center)
-
+     
+					# Wait for tab to open for open_time, then close with keyboard shortcut, return mouse to original position
 					# Espera a que se abra la pestaña en open_time, la cierra con un atajo del teclado, vuelve el mouse a la posicion inicial
 					pyautogui.moveTo(prev_x, prev_y)
-
+     
+					# Close tab and update counter
 					# Cierra la tab y actualiza el contador
 					time.sleep(open_time)
 					pyautogui.hotkey('ctrl', 'w')
