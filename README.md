@@ -1,5 +1,7 @@
 my fork? just made the image detection better and translated some explanations
 
+# BTW don't use brave, use firefox instead
+
 
 # brave-ad-clicker
 
