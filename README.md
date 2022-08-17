@@ -5,8 +5,8 @@
 - Meant to be used during active computer use, Brave Browser is able to detect human vs machine interactions to prevent ad farming
 
 ### Improvements (TODO)
-- Reduce screenshot size to target bottom-right corner where popup appears
-- Add detection for MacOS, Linux, Windows 11
+- User Interface for controlling settings
+- Add detection for MacOS, Linux
 
 ### User Interface (TODO)
 - Tkinter UI launches when executable runs
@@ -17,7 +17,6 @@
 ### Performance Tweaks
 #### No significant performance issues so far, possible upgrades to consider
 - Reduce screenshot size to where popup appears
-- Narrow search to specific OS
 - Adjust wait time intervals
 
 #### Resources
