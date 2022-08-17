@@ -9,6 +9,10 @@
 ### Improvements (TODO)
 - Reduce screenshot size to target bottom-right corner where popup is
 - Add detection for MacOS, Linux
-- Simple UI for controlling app (Tkinter?)
-  - Turn On/Off
-  - Change time intervals
+- Create executable (.exe) file
+
+### User Interface (TODO)
+- Tkinter UI launches when executable runs
+- Displays elapsed time, number of ads clicked
+- Button to turn bot On/Off
+- Spinbox input to change time variables
