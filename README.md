@@ -25,4 +25,5 @@
 - Narrow search to specific OS
 - Adjust wait time intervals
 
-https: // www.geeksforgeeks.org / taking - screenshots - using - pyscreenshot - in -python /
+#### Resources
+- https://www.geeksforgeeks.org/taking-screenshots-using-pyscreenshot-in-python/
