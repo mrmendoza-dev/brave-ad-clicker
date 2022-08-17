@@ -9,7 +9,6 @@
 ### Improvements (TODO)
 - Reduce screenshot size to target bottom-right corner where popup appears
 - Add detection for MacOS, Linux, Windows 11
-  - Select which OS to search for
 - Create executable (.exe) file
 
 ### User Interface (TODO)
