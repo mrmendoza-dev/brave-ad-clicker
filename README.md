@@ -7,8 +7,9 @@
 
 
 ### Improvements (TODO)
-- Reduce screenshot size to target bottom-right corner where popup is
-- Add detection for MacOS, Linux
+- Reduce screenshot size to target bottom-right corner where popup appears
+- Add detection for MacOS, Linux, Windows 11
+  - Select which OS to search for
 - Create executable (.exe) file
 
 ### User Interface (TODO)
@@ -16,3 +17,9 @@
 - Displays elapsed time, number of ads clicked
 - Button to turn bot On/Off
 - Spinbox input to change time variables
+
+### Performance Tweaks
+#### No significant performance issues so far, possible upgrades to consider
+- Reduce screenshot size to where popup appears
+- Narrow search to specific OS
+- Adjust wait time intervals
