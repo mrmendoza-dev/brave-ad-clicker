@@ -8,7 +8,6 @@ pyautogui.FAILSAFE = False
 sleep_time = 2
 open_time = 0.5
 
-# https: // www.geeksforgeeks.org / taking - screenshots - using - pyscreenshot - in -python /
 
 def main():
 	ads_clicked = 0
