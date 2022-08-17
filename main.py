@@ -25,10 +25,7 @@ def main():
 		elpased_time = datetime.now() - start_time
 		print(f"Elapsed Time: {elpased_time}")
 		input()
-<<<<<<< HEAD
-=======
 
->>>>>>> b84745928a8611e7cb07640f2ff61728ac224f2c
 
 	print('Brave Ad Clicker')
 	print('-----------------------')
