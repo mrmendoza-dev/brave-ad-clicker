@@ -4,22 +4,19 @@ from datetime import datetime
 import sys
 from os import path
 
-# Initialize failsafe (exit when pixel is (0,0)
-pyautogui.FAILSAFE = False
-
-# Initialize sleep variables
-sleep_time = 2
-open_time = 0.5
-
-start_time = datetime.now()
-
-search_samples = ["win-10", "win-11"]
-sample = search_samples[0]
-
-
 
 def main():
+	# Initialize failsafe (exit when pixel is (0,0)
+	pyautogui.FAILSAFE = False
+
+	# Initialize sleep variables
+	sleep_time = 2
+	open_time = 0.5
+
 	ads_clicked = 0
+	start_time = datetime.now()
+	search_filename = "logo.png"
+
 
 	def end_program():
 		print('Program Terminated')
@@ -41,7 +38,7 @@ def main():
 			# SI existe el match, procede, sino vuelve al loop
 			try:
 				bundle_dir = getattr(sys, "_MEIPASS", path.abspath(path.dirname(__file__)))
-				image_path = path.join(bundle_dir, "images", "search", f"{sample}.png")
+				image_path = path.join(bundle_dir, "images", search_filename)
 				target = pyautogui.locateOnScreen(image_path)
     
 				if target is not None:
@@ -73,7 +70,6 @@ def main():
 	except Exception as e:
 		print(f"Exception: {e}")
 		end_program()
-
 
 
 if __name__ == "__main__":
