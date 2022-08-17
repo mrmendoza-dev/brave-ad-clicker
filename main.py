@@ -4,13 +4,18 @@ from datetime import datetime
 import sys
 from os import path
 
-# Initialize failsafe (exit when pixel is (0,0))
+# Initialize failsafe (exit when pixel is (0,0)
 pyautogui.FAILSAFE = False
 
 # Initialize sleep variables
-sleep_time = 1
+sleep_time = 2
 open_time = 0.5
+
 start_time = datetime.now()
+
+search_samples = ["win-10", "win-11"]
+sample = search_samples[0]
+
 
 
 def main():
@@ -35,7 +40,10 @@ def main():
 			# If match exists, proceed, else loop again
 			# SI existe el match, procede, sino vuelve al loop
 			try:
-				target = pyautogui.locateOnScreen('images/search/logo.png')
+				bundle_dir = getattr(sys, "_MEIPASS", path.abspath(path.dirname(__file__)))
+				image_path = path.join(bundle_dir, "images", "search", f"{sample}.png")
+				target = pyautogui.locateOnScreen(image_path)
+    
 				if target is not None:
 					# Save current mouse coordinates before moving
 					# Guarda las coordenadas del mouse antes de mover

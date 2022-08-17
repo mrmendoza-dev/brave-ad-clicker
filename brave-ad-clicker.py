@@ -17,6 +17,7 @@ search_samples = ["win-10", "win-11"]
 sample = search_samples[0]
 
 
+
 def main():
 	ads_clicked = 0
 
@@ -26,7 +27,6 @@ def main():
 		elpased_time = datetime.now() - start_time
 		print(f"Elapsed Time: {elpased_time}")
 
-
 	print('Brave Ad Clicker')
 	print('-----------------------')
 	print('Press Ctrl-C to quit.')
@@ -34,27 +34,32 @@ def main():
 	try:
 		while True:
 			# Wait for seconds in sleep_time, then check screen for a match
+			# Espera para los segundos en sleep_time, despues busca en la pantalla lo que matchee la imagen
 			time.sleep(sleep_time)
 
 			# If match exists, proceed, else loop again
+			# SI existe el match, procede, sino vuelve al loop
 			try:
 				bundle_dir = getattr(sys, "_MEIPASS", path.abspath(path.dirname(__file__)))
 				image_path = path.join(bundle_dir, "images", "search", f"{sample}.png")
-
 				target = pyautogui.locateOnScreen(image_path)
-
+    
 				if target is not None:
 					# Save current mouse coordinates before moving
+					# Guarda las coordenadas del mouse antes de mover
 					prev_x, prev_y = pyautogui.position()
-
+     
 					# Take center of target, move to location and click
+					# Agarra el center del target, se mueve a la localizacion y clickea
 					target_center = pyautogui.center(target)
 					pyautogui.click(target_center)
-
+     
 					# Wait for tab to open for open_time, then close with keyboard shortcut, return mouse to original position
+					# Espera a que se abra la pestaña en open_time, la cierra con un atajo del teclado, vuelve el mouse a la posicion inicial
 					pyautogui.moveTo(prev_x, prev_y)
-
-					# Close tab and update counter`
+     
+					# Close tab and update counter
+					# Cierra la tab y actualiza el contador
 					time.sleep(open_time)
 					pyautogui.hotkey('ctrl', 'w')
 					ads_clicked += 1
@@ -68,6 +73,7 @@ def main():
 	except Exception as e:
 		print(f"Exception: {e}")
 		end_program()
+
 
 
 if __name__ == "__main__":

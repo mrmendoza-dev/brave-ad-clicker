@@ -3,12 +3,9 @@ import tkinter as tk
 from datetime import datetime
 import pytz
 
-
 # https://www.udemy.com/course/desktop-gui-python-tkinter/
-
 # Simple interface for turning bot on/off
 # Change time intervals
-
 
 
 BORDER = 5
