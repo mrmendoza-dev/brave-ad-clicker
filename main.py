@@ -1,5 +1,8 @@
 import pyautogui
 import time
+from datetime import datetime
+import sys
+from os import path
 
 # Initialize failsafe (exit when pixel is (0,0)
 pyautogui.FAILSAFE = False
@@ -7,11 +10,17 @@ pyautogui.FAILSAFE = False
 # Initialize sleep variables
 sleep_time = 2
 open_time = 0.5
+start_time = datetime.now()
 
-# https: // www.geeksforgeeks.org / taking - screenshots - using - pyscreenshot - in -python /
 
 def main():
 	ads_clicked = 0
+
+	def end_program():
+		print('Program Terminated')
+		print(f"Total Ads Clicked: {ads_clicked}")
+		elpased_time = datetime.now() - start_time
+		print(f"Elapsed Time: {elpased_time}")
 
 	print('Brave Ad Clicker')
 	print('-----------------------')
@@ -22,10 +31,9 @@ def main():
 			# Wait for seconds in sleep_time, then check screen for a match
 			time.sleep(sleep_time)
 
-			# TODO Screenshot part of screen
 			# If match exists, proceed, else loop again
 			try:
-				target = pyautogui.locateOnScreen('images/logo.png')
+				target = pyautogui.locateOnScreen('images/search/logo.png')
 				if target is not None:
 					# Save current mouse coordinates before moving
 					prev_x, prev_y = pyautogui.position()
@@ -44,12 +52,13 @@ def main():
 					print(f"Ads Clicked: {ads_clicked}")
 
 			except Exception as e:
-				print(f"Error: {e}")
+				print(f"Error during image recognition: {e}")
 
-
-	except KeyboardInterrupt:
-		print('Program Terminated')
-		print(f"Total Ads Clicked: {ads_clicked}")
+	except KeyboardInterrupt as ke:
+		end_program()
+	except Exception as e:
+		print(f"Exception: {e}")
+		end_program()
 
 
 if __name__ == "__main__":

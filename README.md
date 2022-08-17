@@ -1,7 +1,4 @@
 # Brave Ad Clicker
-
-<<<<<<< Updated upstream
-
 - Currently only compatible with Windows 10
 - [Brave](https://brave.com/) is a web browser that rewards users with cryptocurrency BAT tokens for viewing ads
 - This Python program uses the pyautogui library to detect a Brave ad popup (Only on Windows 10), which will then open and close the ad, returning the cursor to the previous location uninterrupted
@@ -26,9 +23,6 @@
 
 - Reduce screenshot size to where popup appears
 - Narrow search to specific OS
-- # Adjust wait time intervals
-- Brave (https://brave.com/) is a web browser that rewards users with cryptocurrency BAT tokens for viewing ads
-- This Python program uses the pyautogui library to detect a Brave ad popup, which will then open and close the ad, returning the cursor to the previous location uninterrupted
-- Meant to be used during active computer use, Brave Browser is able to detect human vs machine interactions to prevent ad farming
+- Adjust wait time intervals
 
-> > > > > > > Stashed changes
+https: // www.geeksforgeeks.org / taking - screenshots - using - pyscreenshot - in -python /
