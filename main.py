@@ -19,10 +19,13 @@ def main():
 
 
 	def end_program():
-		print('Program Terminated')
+		print('\nProgram Terminated')
+		print('-----------------------')
 		print(f"Total Ads Clicked: {ads_clicked}")
 		elpased_time = datetime.now() - start_time
 		print(f"Elapsed Time: {elpased_time}")
+		input()
+
 
 	print('Brave Ad Clicker')
 	print('-----------------------')
@@ -74,5 +77,4 @@ def main():
 
 if __name__ == "__main__":
 	main()
-	input()
 
