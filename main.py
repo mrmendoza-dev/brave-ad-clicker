@@ -4,25 +4,27 @@ from datetime import datetime
 import sys
 from os import path
 
+# Initialize failsafe (exit when pixel is (0,0)
+pyautogui.FAILSAFE = False
+
+# Initialize sleep variables
+sleep_time = 2
+open_time = 0.5
+
+start_time = datetime.now()
+search_filename = "logo.png"
+
 
 def main():
-	# Initialize failsafe (exit when pixel is (0,0)
-	pyautogui.FAILSAFE = False
-
-	# Initialize sleep variables
-	sleep_time = 2
-	open_time = 0.5
-
 	ads_clicked = 0
-	start_time = datetime.now()
-	search_filename = "logo.png"
-
 
 	def end_program():
-		print('Program Terminated')
+		print('\nProgram Terminated')
+		print('-----------------------')
 		print(f"Total Ads Clicked: {ads_clicked}")
 		elpased_time = datetime.now() - start_time
 		print(f"Elapsed Time: {elpased_time}")
+		input()
 
 	print('Brave Ad Clicker')
 	print('-----------------------')
@@ -74,5 +76,4 @@ def main():
 
 if __name__ == "__main__":
 	main()
-	input()
 
