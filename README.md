@@ -13,6 +13,8 @@
 - Displays elapsed time, number of ads clicked
 - Button to turn bot On/Off
 - Spinbox input to change time variables
+!(User Interface v1)[]
+
 
 ### Performance Tweaks
 #### No significant performance issues so far, possible upgrades to consider
