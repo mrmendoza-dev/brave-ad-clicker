@@ -13,7 +13,7 @@
 - Displays elapsed time, number of ads clicked
 - Button to turn bot On/Off
 - Spinbox input to change time variables
-!(User Interface v1)["/images/other/ui-example-1.png"](https://github.com/mrmendoza171/brave-ad-clicker/blob/main/images/other/ui-example-1.png)]
+!(User Interface v1)[https://github.com/mrmendoza171/brave-ad-clicker/blob/main/images/other/ui-example-1.png]
 
 
 ### Performance Tweaks
