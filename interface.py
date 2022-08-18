@@ -16,6 +16,10 @@ PADY = 5
 FONT = ("Helvetica", 16)
 
 
+# Tkinter UI launches when executable runs
+# Displays elapsed time, number of ads clicked
+# Button to turn bot On/Off
+# Spinbox input to change time variables
 
 
 class Root(tk.Tk):
@@ -59,7 +63,7 @@ class Root(tk.Tk):
         on_btn.grid(row=1, column=1)
 
         tk.Label(main_frame, text="Bot Interval", fg=FONT_COLOR, bg=BG_COLOR, font=FONT).grid(row=5, column=0)
-        interval_counter = tk.Spinbox(main_frame, width=6, from_=1, to=30, font=FONT, textvariable=2)
+        interval_counter = tk.Spinbox(main_frame, increment=0.1, width=6, from_=1, to=30, font=FONT, textvariable=2)
         interval_counter.grid(row=5, column=1)
 
 
@@ -74,7 +78,7 @@ class Root(tk.Tk):
 
     def root_startup(self):
         self.title("Brave Ad Clicker")
-        width, height = 600, 600
+        width, height = 400, 300
         self.config(bg="black")
 
         # Centers root window, Gets both half the screen width/height and window width/height
@@ -100,11 +104,11 @@ class Root(tk.Tk):
 
 
 
-#
-# if __name__ == '__main__':
-#     now = datetime.now(tz=pytz.UTC)
-#     print(f"Current time: {now}")
-#
-#
-#     root = Root()
-#     root.mainloop()
+
+if __name__ == '__main__':
+    now = datetime.now(tz=pytz.UTC)
+    print(f"Current time: {now}")
+
+
+    root = Root()
+    root.mainloop()
