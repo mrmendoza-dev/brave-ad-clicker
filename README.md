@@ -5,16 +5,10 @@
 - Meant to be used during active computer use, Brave Browser is able to detect human vs machine interactions to prevent ad farming
 
 
-### User Interface (TODO)
-- Tkinter UI launches when executable runs
-- Displays elapsed time, number of ads clicked
-- Button to turn bot On/Off
-- Spinbox input to change time variables
-
+### User Interface
 ![User Interface v1](https://github.com/mrmendoza171/brave-ad-clicker/blob/main/images/other/ui-example-2.png)
 
 ### Improvements (TODO)
-- User Interface for controlling settings
 - Add detection for MacOS, Linux
 
 #### Resources
