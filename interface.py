@@ -144,15 +144,13 @@ class Root(tk.Tk):
         self.grid_columnconfigure(0, weight=1)
 
         # Set icon for window
-        im = tk.PhotoImage(file="images/logo.png")
-        self.iconphoto(False, im)
+        # im = tk.PhotoImage(file="images/logo.png")
+        # self.iconphoto(False, im)
 
         # Allows frame to be centered
         self.grid_rowconfigure(0, weight=1)
         self.grid_columnconfigure(0, weight=1)
 
 
-
-
-if __name__ == '__main__':
-    launch_interface()
+# if __name__ == '__main__':
+#     launch_interface()

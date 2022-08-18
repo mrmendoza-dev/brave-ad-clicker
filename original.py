@@ -4,18 +4,19 @@ from datetime import datetime
 import sys
 from os import path
 
-# Initialize failsafe (exit when pixel is (0,0))
-pyautogui.FAILSAFE = False
-
-# Initialize sleep variables
-sleep_time = 2
-open_time = 0.5
-
-start_time = datetime.now()
-search_filename = "logo.png"
-
 
 def main():
+	# Initialize failsafe (exit when pixel is (0,0))
+	pyautogui.FAILSAFE = False
+
+	# Initialize sleep variables
+	sleep_time = 2
+	open_time = 0.5
+
+	start_time = datetime.now()
+	search_filename = "logo.png"
+
+
 	ads_clicked = 0
 
 	def end_program():
@@ -73,7 +74,7 @@ def main():
 		print(f"Exception: {e}")
 		end_program()
 
-
-if __name__ == "__main__":
-	main()
-
+#
+# if __name__ == "__main__":
+# 	main()
+#
