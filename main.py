@@ -8,7 +8,7 @@ from os import path
 pyautogui.FAILSAFE = False
 
 # Initialize sleep variables
-sleep_time = 2
+refresh_time = 2
 open_time = 0.5
 
 start_time = datetime.now()
@@ -35,7 +35,7 @@ def main():
 		while True:
 			# Wait for seconds in sleep_time, then check screen for a match
 			# Espera para los segundos en sleep_time, despues busca en la pantalla lo que matchee la imagen
-			time.sleep(sleep_time)
+			time.sleep(refresh_time)
 
 			# If match exists, proceed, else loop again
 			# SI existe el match, procede, sino vuelve al loop
